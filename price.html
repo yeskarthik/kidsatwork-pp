@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+      function getUrlParameter(sParam)
+      {
+          var sPageURL = window.location.search.substring(1);
+          var sURLVariables = sPageURL.split('&');
+          for (var i = 0; i < sURLVariables.length; i++) 
+          {
+              var sParameterName = sURLVariables[i].split('=');
+              if (sParameterName[0] == sParam) 
+              {
+                  return sParameterName[1];
+              }
+          }
+      }
+
+      $(function(){
+        $("#name").html(getUrlParameter('name'));
+        $("#qr-holder").hide();
+        $("#submit").click(function(){
+          $("#form-holder").hide();
+          $("#qr-holder").show();
+          $("#qrcode").attr("src", "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl="+$("#price").val());
+        });
+      });
+    </script>
+
+
+    <title><a href="index.html">Kidsatwork-PayPal</a></title>
+  </head>
+
+  <body>
+     <div class="center">
+    <header>
+      <div class="inner">
+        <h1>Kidsatwork-pp</h1>
+        <h2>Welcome <span id="name"></span>!!</h2>
+      </div>
+    </header>
+    <img src="https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom.svg"/>
+    <section id="form-holder">
+      <h3> Enter Price </h3>
+      <input type="text" name="price" id="price" value=""/> <br/>
+      <img style="width:150px" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynow_LG.gif" id="submit" />
+    </section>
+
+    <section id="qr-holder">
+      Show this QR Code to the Shop Keeper to get your goodie <br/>
+      <img id="qrcode" src=""/> <br/>
+    </section>
+
+    </div>
+  </body>
+</html>
