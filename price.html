@@ -28,18 +28,21 @@
       }
 
       $(function(){
-        $("#name").html(getUrlParameter('name'));
+        $("#name").html(decodeURIComponent(getUrlParameter('name')));
         $("#qr-holder").hide();
         $("#submit").click(function(){
           $("#form-holder").hide();
           $("#qr-holder").show();
           $("#qrcode").attr("src", "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl="+$("#price").val());
         });
+        $(".inner").click(function(){
+          window.location.href = "index.html";
+        });
       });
     </script>
 
 
-    <title><a href="index.html">Kidsatwork-PayPal</a></title>
+    <title>Kidsatwork-PayPal</a></title>
   </head>
 
   <body>

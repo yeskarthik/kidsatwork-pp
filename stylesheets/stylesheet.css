@@ -480,38 +480,41 @@ footer a:hover {
 
 
 /* Kidsatwork styles */
- .center {
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      img {
-        margin: 20px;
-        width: 250px;
-      }
-      button {
-        display: inline-block;
-        padding: 9px 15px 5px;
-        margin-bottom: 0;
-        background: #019cde;
-        font-size: 15px;
-        font-size: 1.07142857142857rem;
-        font-weight: bold;
-        line-height: 1.4545em;
-        -webkit-font-smoothing: antialiased;
-        color: #fff;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-        border-radius: 5px;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
+.center {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inner {
+  cursor: pointer;
+}
+img {
+  margin: 20px;
+  width: 250px;
+}
+button {
+  display: inline-block;
+  padding: 9px 15px 5px;
+  margin-bottom: 0;
+  background: #019cde;
+  font-size: 15px;
+  font-size: 1.07142857142857rem;
+  font-weight: bold;
+  line-height: 1.4545em;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 5px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-      input {
-        padding: 12px;
-        font-size: 24px;
-        width: 200px;
-        text-align: center;
-      }
+input {
+  padding: 12px;
+  font-size: 24px;
+  width: 200px;
+  text-align: center;
+}
