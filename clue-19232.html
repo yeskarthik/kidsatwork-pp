@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/toggleswitch.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="javascripts/ToggleSwitch.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+      $(function(){
+         $("#cluetext").hide();
+        $("#submit").click(function(){
+          window.location.href = "price.html?name="+$("#name").val();
+        });
+        var checkbox = document.getElementById('clue');
+        var switches = new ToggleSwitch(checkbox, 'Out', 'In');
+        switches.addListener(function(enabled){
+          setTimeout(function(){
+            if(enabled) {
+              $("#checkin").hide();
+              $("#cluetext").show();
+            }
+          }, 1000);
+        });
+
+      });
+      
+    </script>
+    <title>Kidsatwork-PayPal</title>
+  </head>
+
+  <body>
+    <div class="center">
+      <header>
+        <div class="inner">
+          <h1>Kidsatwork-pp</h1>
+          <h2>Demo PayPal website for Kids</h2>
+        </div>
+      </header>
+      <img src="https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom.svg"/>
+      <div id="checkin">
+      <section>
+        <h3> Swipe to Check </h3>
+<input type="checkbox" class="blue" name="clue" id="clue"/>
+        
+        <br/>
+      </section>
+    </div>
+      <div id="cluetext">
+        <h3>You'll get Money from this Machine</h3>
+      </div>
+    </div>
+  
+  </body>
+</html>
